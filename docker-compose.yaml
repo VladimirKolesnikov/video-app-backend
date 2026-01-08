@@ -1,13 +1,13 @@
 services:
   api:
-    build: ./video-app-backend
+    build: ./
     container_name: nest-api
     ports:
       - "3000:3000"
     volumes:
-      - ./video-app-backend:/app
+      - ./:/app
     env_file:
-      - ./video-app-backend/.env
+      - .env
     depends_on:
       - db
 
